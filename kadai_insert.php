@@ -24,11 +24,13 @@ $status = $stmt->execute(); //実行
 //４．データ登録処理後
 if($status==false){
     //*** function化を使う！*****************
-    $error = $stmt->errorInfo();
-    exit("SQLError:".$error[2]);
+    sql_error($stmt);
+    //$error = $stmt->errorInfo();
+    //exit("SQLError:".$error[2]);
 }else{
     //*** function化を使う！*****************
-    header("Location: kadai_index.php");
+    //header("Location: kadai_index.php");
+    redirect("kadai_index.php");
     exit();
 }
 

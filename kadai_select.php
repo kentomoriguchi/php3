@@ -15,7 +15,7 @@ if($status==false) {
   //SQL成功の場合
   while( $r = $stmt->fetch(PDO::FETCH_ASSOC)){ //データ取得数分繰り返す
     //以下でリンクの文字列を作成, $r["id"]でidをdetail.phpに渡しています
-    $view .= '<a href="kadai_detail.php?id='.h($r["id"]).'">';
+    $view .= '<a href="bm_update_view.php?id='.h($r["id"]).'">';
     $view .= h($r["id"])."|".h($r["title"])."|".h($r["author"])."|".h($r["url"])."|".h($r["coment"])."<br>";
     $view .= '</a>';
   }
