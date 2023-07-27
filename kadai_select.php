@@ -16,8 +16,12 @@ if($status==false) {
   while( $r = $stmt->fetch(PDO::FETCH_ASSOC)){ //データ取得数分繰り返す
     //以下でリンクの文字列を作成, $r["id"]でidをdetail.phpに渡しています
     $view .= '<a href="bm_update_view.php?id='.h($r["id"]).'">';
-    $view .= h($r["id"])."|".h($r["title"])."|".h($r["author"])."|".h($r["url"])."|".h($r["coment"])."<br>";
+    $view .= h($r["id"])."|".h($r["title"])."|".h($r["author"])."|".h($r["url"])."|".h($r["coment"]);
     $view .= '</a>';
+    $view .= '<a href="kadai_delete.php?id='.h($r["id"]).'">';
+    $view .= '[削除]';
+    $view .= '</a>';
+    $view .= '<br>';
   }
 }
 ?>
