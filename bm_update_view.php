@@ -18,7 +18,6 @@ if($status==false) {
   //SQL成功の場合
   $row = $stmt->fetch();//1レコードだけ取得する方法
 }
-var_dump($row["title"]);
 
 ?>
 <!DOCTYPE html>
@@ -42,10 +41,10 @@ var_dump($row["title"]);
 <!-- Head[End] -->
 
 <!-- Main[Start] -->
-<form method="POST" action="update.php">
+<form method="POST" action="bm_update.php">
   <div class="jumbotron">
    <fieldset>
-    <legend>フリーアンケート</legend>
+    <legend>Gs Book</legend>
      <label>タイトル：<input type="text" name="title" value="<?=$row["title"]?>"></label><br>
      <label>著者：<input type="text" name="author" value="<?=$row["author"]?>"></label><br>
      <label>url:<input type="text" name="url" value="<?=$row["url"]?>"></label><br>
